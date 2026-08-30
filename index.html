@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>يوسف ناصر — مصمم مواقع ويب ومبرمج ذكاء اصطناعي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- SPLASH -->
+  <div id="splash">
+    <div class="term" id="termBox">
+      <div class="term-bar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="term-title">welcome.sh — running</span>
+      </div>
+      <div class="term-body">
+        <div class="line"><span class="path">youssef@portfolio</span> ~ % <span id="typed"></span><span class="cursor"></span></div>
+        <div class="bar-wrap">
+          <div class="bar-track"><div class="bar-fill" id="barFill"></div></div>
+          <div class="bar-label" id="barLabel">loading assets…</div>
+        </div>
+      </div>
+    </div>
+    <div class="welcome-reveal" id="welcomeReveal">
+      <div class="wave">👋</div>
+      <h1>أهلاً بيك</h1>
+      <p>welcome to <span class="accent">Youssef Nasser</span>'s world</p>
+    </div>
+  </div>
+
+  <!-- TELEGRAM BADGE -->
+  <a href="https://t.me/elshahaly9" target="_blank" rel="noopener" id="tg-badge">
+    <span class="pulse"></span>
+    <span class="tg-text">Dev<br>Yousef</span>
+  </a>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Y<span>.</span>NASSER</div>
+    <nav>
+      <ul>
+        <li><a href="#hero">الرئيسية</a></li>
+        <li><a href="#about">عني</a></li>
+        <li><a href="#skills">مهاراتي</a></li>
+        <li><a href="#location">موقعي</a></li>
+        <li><a href="https://t.me/elshahaly9" target="_blank" rel="noopener">تواصل</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div data-reveal>
+      <div class="eyebrow">portfolio.init()</div>
+      <h1>أهلاً بيك، أنا <span class="accent">يوسف ناصر</span></h1>
+      <div class="role-line">const role = "مصمم مواقع ويب ومبرمج ذكاء اصطناعي"<span class="blink"></span></div>
+      <div class="tags">
+        <span class="tag">18 سنة</span>
+        <span class="tag">مواليد 19/04/2008</span>
+        <span class="tag">محافظة المنوفية</span>
+        <span class="tag">مركز منوف</span>
+        <span class="tag">قرية تتا وغمرين</span>
+      </div>
+      <div class="cta-row">
+        <a href="#about" class="btn primary">تعرف عليّا أكتر</a>
+        <a href="https://t.me/elshahaly9" target="_blank" rel="noopener" class="btn ghost">تواصل معايا</a>
+      </div>
+    </div>
+    <div class="photo-wrap" data-reveal>
+      <div class="photo-frame">
+        <img src="photo.jpg" alt="يوسف ناصر">
+      </div>
+      <div class="float-badge"><span class="k">status:</span> <span class="v">available_for_work</span></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-head" data-reveal>
+      <div class="section-num">01 / about</div>
+      <h2>نبذة عني</h2>
+    </div>
+    <div class="about-grid" data-reveal>
+      <div class="info-card">
+        <div class="k">full_name</div>
+        <div class="v">يوسف ناصر سعيد الشهالي</div>
+      </div>
+      <div class="info-card">
+        <div class="k">age</div>
+        <div class="v">18 سنة</div>
+      </div>
+      <div class="info-card">
+        <div class="k">birth_date</div>
+        <div class="v">19 أبريل 2008</div>
+      </div>
+      <div class="info-card">
+        <div class="k">location</div>
+        <div class="v">المنوفية، مركز منوف، قرية تتا وغمرين</div>
+      </div>
+      <div class="info-card">
+        <div class="k">profession</div>
+        <div class="v">مصمم مواقع ويب ومبرمج ذكاء اصطناعي</div>
+      </div>
+      <div class="info-card">
+        <div class="k">passion</div>
+        <div class="v">شغوف بالبرمجة أوي 💻</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <div class="quote-block" data-reveal>
+    <p>"مش بس بصمم مواقع… أنا <span class="accent">بكتب أكواد بحب</span>، وكل سطر بيقرب مني خطوة من الاحتراف."</p>
+    <div class="sig">— Youssef Nasser</div>
+  </div>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-head" data-reveal>
+      <div class="section-num">02 / skills</div>
+      <h2>مهاراتي وشغفي بالكود</h2>
+    </div>
+
+    <div class="code-window" data-reveal>
+      <div class="term-bar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="term-title">youssef.js</span>
+      </div>
+      <div class="code-body">
+        <div class="code-line"><span class="ln">1</span><span class="c-key">const</span> <span class="c-var">youssef</span> <span class="c-punc">=</span> <span class="c-punc">{</span></div>
+        <div class="code-line"><span class="ln">2</span>&nbsp;&nbsp;<span class="c-attr">name</span><span class="c-punc">:</span> <span class="c-str">"Youssef Nasser"</span><span class="c-punc">,</span></div>
+        <div class="code-line"><span class="ln">3</span>&nbsp;&nbsp;<span class="c-attr">role</span><span class="c-punc">:</span> <span class="c-str">"Web Developer & AI Programmer"</span><span class="c-punc">,</span></div>
+        <div class="code-line"><span class="ln">4</span>&nbsp;&nbsp;<span class="c-attr">location</span><span class="c-punc">:</span> <span class="c-str">"Menouf, Monufia"</span><span class="c-punc">,</span></div>
+        <div class="code-line"><span class="ln">5</span>&nbsp;&nbsp;<span class="c-attr">skills</span><span class="c-punc">:</span> <span class="c-punc">[</span><span class="c-str">"HTML"</span><span class="c-punc">,</span> <span class="c-str">"CSS"</span><span class="c-punc">,</span> <span class="c-str">"JavaScript"</span><span class="c-punc">,</span> <span class="c-str">"UI/UX"</span><span class="c-punc">,</span> <span class="c-str">"AI Programming"</span><span class="c-punc">],</span></div>
+        <div class="code-line"><span class="ln">6</span>&nbsp;&nbsp;<span class="c-attr">loves</span><span class="c-punc">:</span> <span class="c-str">"programming"</span><span class="c-punc">,</span></div>
+        <div class="code-line"><span class="ln">7</span>&nbsp;&nbsp;<span class="c-fn">isPassionate</span><span class="c-punc">:</span> <span class="c-key">true</span></div>
+        <div class="code-line"><span class="ln">8</span><span class="c-punc">};</span></div>
+        <div class="code-line"><span class="ln">9</span></div>
+        <div class="code-line"><span class="ln">10</span><span class="c-com">// دايمًا بدور على حل أذكى وتصميم أجمل</span></div>
+        <div class="code-line"><span class="ln">11</span><span class="c-fn">console</span><span class="c-punc">.</span><span class="c-fn">log</span><span class="c-punc">(</span><span class="c-var">youssef</span><span class="c-punc">.</span><span class="c-attr">loves</span><span class="c-punc">);</span> <span class="c-com">// "programming"</span></div>
+      </div>
+    </div>
+
+    <div class="skills-row" data-reveal>
+      <div class="skill-chip"><span class="dotcolor" style="background:#e34c26"></span> HTML5</div>
+      <div class="skill-chip"><span class="dotcolor" style="background:#264de4"></span> CSS3</div>
+      <div class="skill-chip"><span class="dotcolor" style="background:#f2b705"></span> JavaScript</div>
+      <div class="skill-chip"><span class="dotcolor" style="background:#7c6ff0"></span> UI / UX</div>
+      <div class="skill-chip"><span class="dotcolor" style="background:#3ddc84"></span> تصميم مواقع</div>
+      <div class="skill-chip"><span class="dotcolor" style="background:#ff6b6b"></span> حل مشاكل</div>
+      <div class="skill-chip"><span class="dotcolor" style="background:#34aadf"></span> برمجة ذكاء اصطناعي</div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section id="location">
+    <div class="section-head" data-reveal>
+      <div class="section-num">04 / location</div>
+      <h2>موقعي على الخريطة</h2>
+    </div>
+    <div class="map-shell" data-reveal>
+      <div class="term-bar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span class="term-title">location.map</span>
+      </div>
+      <div class="map-stage">
+        <div id="map"></div>
+        <div class="map-fallback" id="mapFallback">
+          <div class="mf-grid"></div>
+          <div class="mf-pin">
+            <span class="mf-pin-dot"></span>
+            <span class="mf-pin-pulse"></span>
+          </div>
+          <div class="mf-label">
+            <div class="mf-village">قرية تتا وغمرين</div>
+            <div class="mf-coords">30.5123° N, 30.9119° E</div>
+          </div>
+        </div>
+      </div>
+      <div class="map-foot">
+        <span class="addr">قرية تتا وغمرين — مركز منوف — محافظة المنوفية، مصر</span>
+        <a class="btn primary" href="https://maps.app.goo.gl/abBfrEcEnMUdz4Rw7" target="_blank" rel="noopener">افتح في خرائط جوجل</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="name">يوسف ناصر سعيد الشهالي</div>
+    <div class="small">designed &amp; built with ❤ by Youssef · <span id="year"></span></div>
+  </footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
