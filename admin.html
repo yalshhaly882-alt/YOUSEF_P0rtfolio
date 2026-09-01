@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة التحكم — يوسف ناصر</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body style="overflow:auto;">
+
+  <!-- LOGIN -->
+  <div id="loginScreen" class="admin-shell">
+    <div class="admin-card">
+      <h1>👋 أهلاً بيك يا يوسف</h1>
+      <p class="sub">دخّل الباسورد عشان تدخل لوحة التحكم.<br>الباسورد الافتراضي: <code style="direction:ltr; display:inline-block;">youssef2026</code> (غيّره من جوه بعد ما تدخل).</p>
+      <div class="admin-field">
+        <label>الباسورد</label>
+        <input type="password" id="loginPass" placeholder="••••••••">
+      </div>
+      <button class="admin-btn" id="loginBtn">دخول</button>
+      <div class="admin-err" id="loginErr"></div>
+    </div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard" style="display:none;">
+    <div class="admin-top">
+      <div class="logo">Y<span>.</span>NASSER <span style="color:var(--muted); font-size:12px; font-weight:600;">/ admin</span></div>
+      <button class="logout-btn" id="logoutBtn">🚪 تسجيل خروج</button>
+    </div>
+
+    <div class="dash-wrap">
+      <div class="dash-section" style="border-color:var(--violet);">
+        <h2>ℹ️ إزاي التعديلات تظهر لكل الزوار</h2>
+        <p class="sub">بما إن firebase-config.js متظبط، أي تعديل بتعمله دلوقتي — نص، صورة، لون، سوشيال ميديا، أغاني، وطبعًا الإيموجي والتعليقات — بيظهر فورًا لأي زائر من غير ما تحتاج ترفع أي ملف تاني. الرفع على GitHub محتاج بس أول مرة تنشر الموقع، أو لو غيّرت حاجة في الكود نفسه.</p>
+      </div>
+
+      <div class="dash-section">
+        <h2>✏️ تعديل محتوى الموقع</h2>
+        <p class="sub" style="margin-bottom:16px;">دوس الزرار ده هيفتحلك الموقع نفسه في وضع التعديل — تقدر تدوس على أي نص فيه وتعدّله على طول، تلوّن أي جزء، تحوّله لعنوان، أو تغيّر صورتك، وبعدين تدوس "حفظ" — يظهر لكل الزوار على طول.</p>
+        <button class="admin-btn" id="openEditBtn">🖊️ افتح وضع التعديل على الموقع</button>
+      </div>
+
+      <div class="dash-section">
+        <h2>🔗 حسابات السوشيال ميديا</h2>
+        <p class="sub" style="margin-bottom:16px;">حط الرابط بتاع أي حساب — الأيقونة المناسبة هتظهر تلقائي في الموقع. سيب الحقل فاضي لو مش عايز تظهره.</p>
+        <div class="social-admin-row">
+          <span class="si"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2c2.7 0 3.05.01 4.12.06 1.06.05 1.79.22 2.43.47.66.26 1.22.6 1.77 1.15.55.55.9 1.11 1.15 1.77.25.64.42 1.37.47 2.43C21.99 8.95 22 9.3 22 12s-.01 3.05-.06 4.12c-.05 1.06-.22 1.79-.47 2.43a4.9 4.9 0 0 1-1.15 1.77 4.9 4.9 0 0 1-1.77 1.15c-.64.25-1.37.42-2.43.47-1.07.05-1.42.06-4.12.06s-3.05-.01-4.12-.06c-1.06-.05-1.79-.22-2.43-.47a4.9 4.9 0 0 1-1.77-1.15 4.9 4.9 0 0 1-1.15-1.77c-.25-.64-.42-1.37-.47-2.43C2.01 15.05 2 14.7 2 12s.01-3.05.06-4.12c.05-1.06.22-1.79.47-2.43.26-.66.6-1.22 1.15-1.77a4.9 4.9 0 0 1 1.77-1.15c.64-.25 1.37-.42 2.43-.47C8.95 2.01 9.3 2 12 2zm0 1.8c-2.65 0-2.97.01-4.02.06-.86.04-1.32.18-1.63.3-.41.16-.7.35-1.01.66-.31.31-.5.6-.66 1.01-.12.31-.26.77-.3 1.63C4.33 8.53 4.3 8.85 4.3 12s.03 3.47.08 4.52c.04.86.18 1.32.3 1.63.16.41.35.7.66 1.01.31.31.6.5 1.01.66.31.12.77.26 1.63.3 1.05.05 1.37.06 4.02.06s2.97-.01 4.02-.06c.86-.04 1.32-.18 1.63-.3.41-.16.7-.35 1.01-.66.31-.31.5-.6.66-1.01.12-.31.26-.77.3-1.63.05-1.05.06-1.37.06-4.52s-.01-3.47-.06-4.52c-.04-.86-.18-1.32-.3-1.63a2.7 2.7 0 0 0-.66-1.01 2.7 2.7 0 0 0-1.01-.66c-.31-.12-.77-.26-1.63-.3C14.97 3.81 14.65 3.8 12 3.8zm0 3.05a5.15 5.15 0 1 1 0 10.3 5.15 5.15 0 0 1 0-10.3zm0 1.8a3.35 3.35 0 1 0 0 6.7 3.35 3.35 0 0 0 0-6.7zm5.35-1.98a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0z"/></svg></span>
+          <input type="text" id="socialInstagram" placeholder="رابط حساب Instagram (https://instagram.com/...)">
+        </div>
+        <div class="social-admin-row">
+          <span class="si"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7.6h2.55l.38-2.96h-2.93V8.55c0-.86.24-1.44 1.47-1.44h1.57V4.46C16.24 4.4 15.3 4.3 14.21 4.3c-2.28 0-3.84 1.39-3.84 3.95v2.19H7.8v2.96h2.57V21h3.13z"/></svg></span>
+          <input type="text" id="socialFacebook" placeholder="رابط حساب Facebook (https://facebook.com/...)">
+        </div>
+        <div class="social-admin-row">
+          <span class="si"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.2v13.4a2.9 2.9 0 1 1-2.06-2.78v-3.3a6.1 6.1 0 1 0 5.26 6.04c0-.1 0-.2-.01-.3V8.9a7.9 7.9 0 0 0 4.41 1.34V7.03a4.7 4.7 0 0 1-4.4-5.03z"/></svg></span>
+          <input type="text" id="socialTiktok" placeholder="رابط حساب TikTok (https://tiktok.com/@...)">
+        </div>
+        <button class="admin-btn" id="saveSocialsBtn" style="width:auto; padding:11px 22px; margin-top:6px;">💾 حفظ (يظهر فورًا)</button>
+        <div class="admin-err" id="socialsMsg"></div>
+      </div>
+
+      <div class="dash-section">
+        <h2>🎵 الأغاني والقرآن</h2>
+        <p class="sub" style="margin-bottom:16px;">ضيف رابط يوتيوب (أغنية أو تلاوة قرآنية) أو رابط ملف صوتي مباشر — هيظهر تلقائي كمشغل صوت في الموقع لأي زائر يقدر يشغّله.</p>
+        <div class="track-add-row">
+          <input type="text" id="trackTitle" placeholder="اسم الأغنية / السورة">
+          <input type="text" id="trackUrl" placeholder="رابط يوتيوب أو رابط ملف صوتي مباشر">
+          <button class="admin-btn" id="addTrackBtn" style="width:auto; padding:11px 20px;">➕ ضيف</button>
+        </div>
+        <div class="track-list" id="trackList"></div>
+      </div>
+
+      <div class="dash-section">
+        <h2>📊 الزيارات</h2>
+        <p class="sub" style="margin-bottom:16px;">عدد الزيارات ووقتها ونوع الجهاز تقريبًا — من غير أي اسم أو هوية شخصية.</p>
+        <div id="visitsSummary" style="font-size:28px; font-weight:900; margin-bottom:14px;"></div>
+        <div id="visitsList" style="max-height:300px; overflow:auto;"></div>
+      </div>
+
+      <div class="dash-section">
+        <h2>❤️ التفاعلات (إيموجي)</h2>
+        <p class="sub" style="margin-bottom:16px;">عدد كل إيموجي دوس عليه أي زائر — مشترك ومباشر بين كل الناس، مش محتاج تعمل حاجة عشان يظهر.</p>
+        <div class="reaction-row" id="reactionSummary" style="margin-top:0; justify-content:flex-start;"></div>
+      </div>
+
+      <div class="dash-section">
+        <h2>💬 التعليقات</h2>
+        <p class="sub" style="margin-bottom:16px;">أي تعليق يوصل من زوار الموقع يظهر هنا فورًا. اكتب رد وهو هيظهر تحت التعليق في الموقع لأي حد يشوفه.</p>
+        <div id="commentsAdminList"></div>
+      </div>
+
+      <div class="dash-section">
+        <h2>🔑 تغيير الباسورد</h2>
+        <p class="sub" style="margin-bottom:12px;">ملحوظة: الباسورد بيتخزن في متصفحك بس (مش على سيرفر)، فلو غيّرته من هنا هيشتغل على نفس الجهاز/المتصفح ده. لو عايز تغييره يشتغل من أي جهاز، افتح ملف <code style="direction:ltr;">admin.js</code> وغيّر قيمة <code style="direction:ltr;">DEFAULT_PASSWORD</code> وارفعه تاني.</p>
+        <div class="dash-grid">
+          <div class="admin-field">
+            <label>الباسورد الحالي</label>
+            <input type="password" id="curPass">
+          </div>
+          <div class="admin-field">
+            <label>الباسورد الجديد</label>
+            <input type="password" id="newPass">
+          </div>
+        </div>
+        <button class="admin-btn" id="changePassBtn" style="width:auto; padding:11px 22px;">تحديث الباسورد (على الجهاز ده بس)</button>
+        <div class="admin-err" id="passErr"></div>
+      </div>
+    </div>
+  </div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>
