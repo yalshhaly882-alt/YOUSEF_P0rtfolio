@@ -1,4 +1,4 @@
-const DEFAULT_PASSWORD = 'youssef2026';
+const DEFAULT_PASSWORD = 'yousef1411';
 
 function getPassword(){
   return localStorage.getItem('yn_admin_password') || DEFAULT_PASSWORD;
