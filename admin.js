@@ -51,7 +51,7 @@ if(typeof window.db === 'undefined' || typeof firebase === 'undefined' || !fireb
     if(user){
       initDashboard();
     } else {
-      show('login');
+      show('loginScreen');
     }
   });
 
